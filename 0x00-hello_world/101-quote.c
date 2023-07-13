@@ -7,11 +7,7 @@
  */
 int main(void)
 {
-char str[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
-
-int i;
-for (i = 0; str[i] != '\0'; i++)
-	putchar(str[i]);
+fprintf(stderr, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n");
 
 return (0);
 }
