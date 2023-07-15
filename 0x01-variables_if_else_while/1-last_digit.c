@@ -19,11 +19,12 @@ int main(void)
 	/* your code goes there */
 
 	printf("Last digit of %d is ", n);
+	digit = 1;
 	if (n < 0) {
 		n = -n;
-		printf("-");
+		digit = -1;
 	}
-        digit = n % 10;
+        digit = digit * (n % 10);
 	printf("%d ", digit);
 	if (digit > 5)
 		printf("and is greater than 5\n");
