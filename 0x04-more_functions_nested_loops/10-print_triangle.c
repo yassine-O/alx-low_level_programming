@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * print_square - Description
+ * print_triangle - Description
  * @size : int
  * Description: prints lower alphabets
  * Return: void
  */
-void print_square(int size)
+void print_triangle(int size)
 {
 	int i, j;
 
