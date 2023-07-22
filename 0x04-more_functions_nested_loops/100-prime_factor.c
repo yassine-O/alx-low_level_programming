@@ -1,7 +1,5 @@
 #include <stdio.h>
 
-int isPrime(long n);
-
 /**
  * main - Entry point
  *
@@ -13,9 +11,9 @@ int main(void)
 	long N = 612852475143;
 	long prime_factor;
 
-	for (i = 2; i <= N; i++)
+	for (i = 3; i <= N; i += 2)
 	{
-		if (isPrime(i) && N % i == 0)
+		while (N % i == 0)
 		{
 			prime_factor = i;
 			N /= i;
@@ -25,22 +23,4 @@ int main(void)
 	printf("%li\n", prime_factor);
 
 	return (0);
-}
-
-/**
- * isPrime - checks prime numbers
- * @n: long
- * Description: prime numbers
- * Return: 1 - 0
- */
-int isPrime(long n)
-{
-	int i;
-
-	for (i = 2; i < n; i++)
-	{
-		if (n % i == 0)
-			return (0);
-	}
-	return (1);
 }
