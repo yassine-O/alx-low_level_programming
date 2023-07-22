@@ -27,7 +27,14 @@ int main(void)
 	return (0);
 }
 
-int isPrime(long n) {
+/**
+ * isPrime - checks prime numbers
+ * @n: long
+ * Description: prime numbers
+ * Return: 1 - 0
+ */
+int isPrime(long n)
+{
 	int i;
 
 	for (i = 2; i < n; i++)
