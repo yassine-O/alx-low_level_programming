@@ -9,7 +9,7 @@
  */
 void print_number(int n)
 {
-	int i, k = 0;
+	int q = 1;
 
 	if (n < 0)
 	{
@@ -17,16 +17,14 @@ void print_number(int n)
 		_putchar('-');
 	}
 
-	while (n > pow(10, k + 1))
+	while (n > q * 10)
 	{
-		k++;
+		q *= 10;
 	}
 
-	for (i = 0; i < k; i++)
+	for (; q >= 1; q /= 10)
 	{
-		_putchar('0' + (n / pow(10, k - i)));
-		n %= (int) pow(10, k - i);
+		_putchar('0' + (n / q));
+		n %= q;
 	}
-
-	_putchar('0' + (n % 10));
 }
