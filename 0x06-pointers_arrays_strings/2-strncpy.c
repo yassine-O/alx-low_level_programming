@@ -1,24 +1,22 @@
 #include "main.h"
 
 /**
- * _strncat - Description
+ * _strncpy - Description
  * @dest: pointer
  * @src: pointer
  * @n: int
  * Description: pointers
  * Return: dest pointer
  */
-char *_strncat(char *dest, char *src, int n)
+char *_strncpy(char *dest, char *src, int n)
 {
 	char *p = dest;
-
-	while (*dest)
-		dest++;
 
 	while (*src && n-- > 0)
 		*dest++ = *src++;
 
-	*dest = '\0';
+	while (n-- > 0)
+		*dest++ = '\0';
 
 	return (p);
 }
