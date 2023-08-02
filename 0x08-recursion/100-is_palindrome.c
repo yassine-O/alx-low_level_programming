@@ -20,7 +20,7 @@ int is_palindrome(char *s)
 }
 
 /**
- * _prime - Description
+ * _strlen - Description
  * @s: pointer
  * Return: int
  */
