@@ -1,5 +1,7 @@
 #include "main.h"
 
+int _prime(int k, int n);
+
 /**
  * is_prime_number - Description
  * @n: int
