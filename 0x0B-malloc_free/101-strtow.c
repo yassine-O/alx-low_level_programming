@@ -13,11 +13,11 @@ char **strtow(char *str)
 	char **words;
 	int n = 0, m = 0, i, j, k;
 
-	if (str == NULL || *str == '\0')
-		return (NULL);
-
 	while (*str == ' ')
 		str++;
+
+	if (str == NULL || *str == '\0')
+		return (NULL);
 
 	for (i = 0; str[i]; i++)
 		if (str[i] == ' ' && str[i + 1] && str[i + 1] != ' ')
