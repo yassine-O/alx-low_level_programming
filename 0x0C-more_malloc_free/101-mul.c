@@ -49,8 +49,13 @@ int main(int argc, char *argv[])
 			r = k / 10;
 			nb++;
 		}
-		if (r > 0)
-			res[na + nb] = r + '0';
+		while (r > 0)
+		{
+			k = (res[na + nb] - '0') + r;
+			res[na + nb] = k % 10 + '0';
+			r = k / 10;
+			nb++;
+		}
 		na++;
 	}
 
