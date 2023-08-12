@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <string.h>
 void _error(void);
 int _isdigit(char *s);
 
@@ -63,6 +63,7 @@ int main(int argc, char *argv[])
 		_putchar(res[i]);
 		i--;
 	}
+	_putchar('\n');
 
 	return (0);
 }
