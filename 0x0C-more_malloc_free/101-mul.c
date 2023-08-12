@@ -14,7 +14,9 @@ int _isdigit(char *s);
 int main(int argc, char *argv[])
 {
 	char *a, *b;
-	int x, y, res;
+	int n1, n2, lena, lenb, na, nb;
+	int k, r, i, j, size;
+	char *res;
 
 	if (argc != 3)
 		_error();
@@ -25,12 +27,42 @@ int main(int argc, char *argv[])
 	if (!_isdigit(a) || !_isdigit(b))
 		_error();
 
-	x = atoi(a);
-	y = atoi(b);
+	lena = strlen(a);
+	lenb = strlen(b);
 
-	res = x * y;
+	size = lena + lenb;
+	res = malloc(size);
 
-	printf("%d\n", res);
+	for (i = 0; i < size; i++)
+		res[i] = '0';
+
+	r = na = 0;
+	for (i = lena - 1; i >= 0; i--)
+	{
+		n1 = a[i] - '0';
+		nb = 0;
+		for (j = lenb - 1; j >= 0; j--)
+		{
+			n2 = b[j] - '0';
+			k = n1 * n2 + (res[na + nb] - '0') + r;
+			res[na + nb] = k % 10 + '0';
+			r = k / 10;
+			nb++;
+		}
+		if (r > 0)
+			res[na + nb] = r + '0';
+		na++;
+	}
+
+	i = size - 1;
+	while (i >= 0 && res[i] == '0')
+		i--;
+
+	while (i >= 0)
+	{
+		_putchar(res[i]);
+		i--;
+	}
 
 	return (0);
 }
