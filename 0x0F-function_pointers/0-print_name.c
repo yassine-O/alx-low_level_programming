@@ -5,8 +5,8 @@
  * print_name - Description
  * @name: pointer
  * @f: function pointer
- * Description: recursion
- * Return: pointer
+ * Description: function pointers
+ * Return: void
  */
 void print_name(char *name, void (*f)(char *))
 {
