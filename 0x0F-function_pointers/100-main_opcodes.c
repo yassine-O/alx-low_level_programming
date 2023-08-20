@@ -29,7 +29,14 @@ int main(int argc, char *argv[])
 
 	opcode = (unsigned char *) main_ptr;
 	for (i = 0; i < bytes; i++)
-		printf("%.2x ", opcode[i]);
+	{
+		printf("%.2x", opcode[i]);
+
+		if (i == bytes - 1)
+			break;
+
+		printf(" ");
+	}
 
 	printf("\n");
 
