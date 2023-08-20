@@ -33,7 +33,10 @@ dog_t *new_dog(char *name, float age, char *owner)
 	downer = malloc(len2 + 1);
 
 	if (dname == NULL || downer == NULL)
+	{
+		free(dname), free(downer), free(d);
 		return (NULL);
+	}
 
 	for (i = 0; i < len1; i++)
 		dname[i] = name[i];
