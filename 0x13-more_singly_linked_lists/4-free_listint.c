@@ -6,7 +6,7 @@
  * Description: linked list
  * Return: void
  */
-void free_listint(const listint_t *h)
+void free_listint(listint_t *h)
 {
 	if (h == NULL)
 		return;
