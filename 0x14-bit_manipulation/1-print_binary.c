@@ -10,7 +10,7 @@ void print_binary(unsigned long int n)
 {
 	int i, k;
 
-	if (n == 0)
+	if (n == 0 || n > 4294967295)
 	{
 		_putchar('0');
 		return;
