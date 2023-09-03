@@ -16,10 +16,9 @@ void print_binary(unsigned long int n)
 		return;
 	}
 
-	i = 32;
-	while (i--)
-		if (n >> i != 0)
-			break;
+	i = 31;
+	while (n >> i == 0)
+		i--;
 
 	for (; i >= 0; i--)
 	{
