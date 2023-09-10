@@ -78,6 +78,8 @@ void _close(int fd)
 	int err = close(fd);
 
 	if (err < 0)
+	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
-	exit(100);
+		exit(100);
+	}
 }
