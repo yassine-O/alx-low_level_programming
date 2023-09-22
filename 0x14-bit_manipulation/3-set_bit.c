@@ -9,7 +9,7 @@
  */
 int set_bit(unsigned long int *n, unsigned int index)
 {
-	unsigned long int k = 1;
+	unsigned long int k = 0x01;
 
 	k = k << index;
 
