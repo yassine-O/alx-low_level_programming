@@ -31,18 +31,3 @@ void print_binary(unsigned long int n)
 		mask >>= 1;
 	}
 }
-
-/*
- * another method without creating a lengthy mask (100...)
- * this while method starts at left beginning of binary and uses mask 1
- *
- * while (len >= 0)
- * {
- *    if ((n >> len) & 1)
- *        _putchar('1');
- *    else
- *        _putchar('0');
- *
- *    len--;
- * }
- */
