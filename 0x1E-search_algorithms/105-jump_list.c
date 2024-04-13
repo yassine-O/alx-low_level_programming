@@ -24,7 +24,7 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 		i = m;
 		while (i-- && b->next != NULL)
 			b = b->next;
-		printf("Value checked array[%ld] = [%d]\n", b->index, b->n);
+		printf("Value checked at index [%ld] = [%d]\n", b->index, b->n);
 		if (b->n == value)
 			return (b);
 	} while (b->next != NULL && b->n < value);
@@ -33,7 +33,7 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 
 	while (a != NULL)
 	{
-		printf("Value checked array[%ld] = [%d]\n", a->index, a->n);
+		printf("Value checked at index [%ld] = [%d]\n", a->index, a->n);
 		if (a->n == value)
 			return (a);
 		a = a->next;
