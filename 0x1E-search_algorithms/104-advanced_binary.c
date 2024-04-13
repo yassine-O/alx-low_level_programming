@@ -38,7 +38,7 @@ int recursive_binary(int *array, int value, int l, int r)
 	print_array(array, l, r);
 
 	if (array[l] == value)
-		return (1);
+		return (l);
 
 	m = (l + r) / 2;
 
